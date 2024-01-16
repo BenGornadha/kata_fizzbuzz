@@ -5,5 +5,5 @@ if __name__ == '__main__':
     fizz_buzz = FizzBuzz()
     with open("result.txt", "w") as fd:
         for number in input:
-            output = fizz_buzz.convert(number=number)
+            output = fizz_buzz.convert_from(number=number)
             fd.writelines(f"{output}\n")
