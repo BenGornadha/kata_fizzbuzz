@@ -99,22 +99,22 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(FizzBuzz(), sut)
         self.assertEqual("FizzBuzz", f"{sut}")
 
-    def test_v2(self):
+    def test_number_has_5_and_3_and_is_not_divisible_by_5_3(self):
         fizz_buzz = FizzBuzzFactory()
         sut = fizz_buzz.convert_from(number=53)
         self.assertEqual(FizzBuzz(), sut)
 
-    def test_v22(self):
+    def test_number_has_5_and_3_and_is_divisible_by_5(self):
         fizz_buzz = FizzBuzzFactory()
         sut = fizz_buzz.convert_from(number=35)
         self.assertEqual(FizzBuzzBuzz(), sut)
 
-    def test_v222(self):
+    def test_number_has_3_but_is_not_divisible_by_3_or_5(self):
         fizz_buzz = FizzBuzzFactory()
         sut = fizz_buzz.convert_from(number=43)
         self.assertEqual(Fizz(), sut)
 
-    def test_v2222(self):
+    def test_number_has_no_3_or_5_neither_divisible(self):
         fizz_buzz = FizzBuzzFactory()
         sut = fizz_buzz.convert_from(number=98)
         self.assertEqual(StringNumber(98), sut)
